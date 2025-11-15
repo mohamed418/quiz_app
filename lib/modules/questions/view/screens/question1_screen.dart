@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quizapp/modules/questions/view/screens/question2_screen.dart';
-import '../widgets/action_button_widget.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quizapp/modules/questions/view_model/quiz_cubit.dart';
+import 'package:quizapp/modules/questions/view_model/quiz_states.dart';
 import '../widgets/answers_widget.dart';
 import '../widgets/question_head_widget.dart';
 
@@ -11,27 +12,21 @@ class Question1Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              QuestionHeadWidget(
+                number: 1,
+                label: 'what is the meaning of perfecto',
+              ),
 
-            QuestionHeadWidget(
-              number: 1,
-              label: "what is the color of the sky",
-            ),
-
-            AnswersWidget(answersCount: 3, answers: ['red', 'green', 'blue']),
-
-            ActionButtonWidget(
-              label: 'Next',
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Question2Screen()),
-                );
-              },
-            ),
-
-          ],
+              AnswersWidget(
+                answersCount: 3,
+                answers: ['red', 'green', 'blue'],
+                correctIndex: 2,
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/action_button_widget.dart';
+import '../widgets/answers_widget.dart';
 import '../widgets/question_head_widget.dart';
 
 class Question2Screen extends StatelessWidget {
@@ -15,8 +16,7 @@ class Question2Screen extends StatelessWidget {
               number: 2,
               label: "The best player in the history",
             ),
-            // AnswersWidget(),
-            ActionButtonWidget(label: 'Done', onTap: () {}),
+            AnswersWidget(answersCount: 3,answers: ['jfl','jbf','hjf'],correctIndex: 2,),
           ],
         ),
       ),
