@@ -5,4 +5,11 @@ class QuizCubit extends Cubit<QuizStates> {
   QuizCubit() : super(QuizInitialState());
 
   static QuizCubit get(context) => BlocProvider.of(context);
+
+  @override
+  Future<void> close() {
+    print('closed');
+    // TODO: implement close
+    return super.close();
+  }
 }

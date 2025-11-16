@@ -72,45 +72,45 @@ class _AnswersWidgetState extends State<AnswersWidget> {
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: GestureDetector(
-            onTap: () {
-              selectedIndex == null
-                  ? print('test')
-                  : Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => Question2Screen(),
-                      ),
-                    );
-            },
-            child: Container(
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: AlignmentGeometry.bottomCenter,
-                  colors: [
-                    selectedIndex == null ? Colors.black12 : Colors.black12,
-                    selectedIndex == null
-                        ? Colors.black12
-                        : Colors.grey.shade600,
-                  ],
-                ),
-              ),
-              child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10.0),
-                  child: Text(
-                    'Next',
-                    style: TextStyle(color: Colors.black, fontSize: 30),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ),
+        // Padding(
+        //   padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        //   child: GestureDetector(
+        //     onTap: () {
+        //       selectedIndex == null
+        //           ? print('test')
+        //           : Navigator.of(context).push(
+        //               MaterialPageRoute(
+        //                 builder: (context) => Question2Screen(),
+        //               ),
+        //             );
+        //     },
+        //     child: Container(
+        //       width: double.infinity,
+        //       decoration: BoxDecoration(
+        //         borderRadius: BorderRadius.circular(20),
+        //         gradient: LinearGradient(
+        //           begin: Alignment.topCenter,
+        //           end: AlignmentGeometry.bottomCenter,
+        //           colors: [
+        //             selectedIndex == null ? Colors.black12 : Colors.black12,
+        //             selectedIndex == null
+        //                 ? Colors.black12
+        //                 : Colors.grey.shade600,
+        //           ],
+        //         ),
+        //       ),
+        //       child: Center(
+        //         child: Padding(
+        //           padding: const EdgeInsets.symmetric(vertical: 10.0),
+        //           child: Text(
+        //             'Next',
+        //             style: TextStyle(color: Colors.black, fontSize: 30),
+        //           ),
+        //         ),
+        //       ),
+        //     ),
+        //   ),
+        // ),
       ],
     );
   }

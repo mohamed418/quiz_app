@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quizapp/modules/questions/view/screens/question1_screen.dart';
 import 'package:quizapp/modules/questions/view_model/quiz_cubit.dart';
+import 'core/bloc_observer/bloc_observer.dart';
 
 void main() {
+  Bloc.observer = MyBlocObserver();
   runApp(const MyApp());
 }
 
@@ -19,7 +21,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Question1Screen(),
+      home: BlocProvider(
+        create: (BuildContext context) => QuizCubit(),
+        child: Question1Screen(),
+      ),
     );
   }
 }
