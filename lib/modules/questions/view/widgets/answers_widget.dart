@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quizapp/modules/questions/view/screens/question2_screen.dart';
 
 class AnswersWidget extends StatefulWidget {
   final int answersCount;
